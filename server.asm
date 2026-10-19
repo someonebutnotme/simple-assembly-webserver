@@ -61,7 +61,7 @@ section .data
 	listenmsglen: equ $-listenmsg
 	acceptmsg: db "Waiting for a new client...", 0x0a
 	acceptmsglen: equ $-acceptmsg
-	response: db "HTTP/1.1 200 OK", 0x0d, 0x0a, "Content-type: text/html", 0x0d, 0x0a, 0x0d, 0x0a, "<h1>Hello world!</h1>"
+	response: db "HTTP/1.1 200 OK", 0x0d, 0x0a, "Content-type: text/html", 0x0d, 0x0a, "Content-Length: 21", 0x0d, 0x0a, 0x0d, 0x0a, "<h1>Hello world!</h1>"
 	responselen: equ $-response
 
 section .bss
