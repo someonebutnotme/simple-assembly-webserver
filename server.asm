@@ -74,8 +74,8 @@ section .bss
 section .text
 error:
 	write STDOUT, errormsg, errormsglen
-	close sockfd
-	close csockfd
+	close [sockfd]
+	close [csockfd]
 	exit 1
 	
 _start:
